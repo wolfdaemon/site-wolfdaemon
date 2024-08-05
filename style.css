@@ -209,7 +209,8 @@ nav ul li a {
     min-width: 18px;
 }
 
-section {
+section,
+article {
     margin: 1rem;
 }
 
@@ -261,7 +262,8 @@ span.copyleft {
         max-width: 40%;
     }
 
-    section {
+    section,
+    article {
         align-items: center;
         display: flex;
         flex-direction: column;
