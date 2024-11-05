@@ -1,0 +1,25 @@
+@font-face {
+	font-family: "Bitter";
+	src:
+		local: ("Bitter"),
+		url("../fonts/Bitter/Bitter-VariableFont_wght.ttf"),
+		url("https://github.com/solmatas/BitterPro/raw/refs/heads/master/fonts/variable/Bitter[wght].ttf");
+}
+
+body {
+	background-color: #222222;
+	color: #FFFFFF;
+	font-family: Bitter, Georgia, serif;
+}
+
+/* Navigation bar styling I don't want to do right now */
+/*
+nav ul {
+	display: flex;
+	flex-direction: row;
+}
+*/
+
+#caption-i-am {
+	font-size: 2em;
+}
