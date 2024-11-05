@@ -1,3 +1,10 @@
+/* COLOR SCHEME: https://fabricweb.z5.web.core.windows.net/pr-deploy-site/refs/heads/master/theming-designer/
+ * COLORS:
+ * - Primary Color: #cf8f19
+ * - Text Color: #ffffff
+ * - Background Color: #240809
+ */
+
 @font-face {
 	font-family: "Bitter";
 	src:
@@ -7,8 +14,9 @@
 }
 
 body {
-	background-color: #222222;
-	color: #FFFFFF;
+	background-color: #240809;
+	color: #ffffff;
+	/* primary-color: #b89000; for pop-out items, like buttons*/
 	font-family: Bitter, Georgia, serif;
 }
 
@@ -26,5 +34,6 @@ nav ul {
 }
 
 #caption-i-am {
+	color: #cf8f19;
 	font-size: 2em;
 }
