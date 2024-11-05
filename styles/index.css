@@ -20,6 +20,11 @@ nav ul {
 }
 */
 
+.symbol-copyleft { /* How to type in HTML: "&copy;" */
+	display:inline-block;
+	transform: rotate(180deg);
+}
+
 #caption-i-am {
 	font-size: 2em;
 }

@@ -1,3 +1,5 @@
+// TODO: Set my Javascript Free: https://www.gnu.org/licenses/agpl-3.0.html
+
 const qualities = ["Wise", "Courageous", "Precise", "Authoritative", "Creative"];
 const captionIAm = document.querySelector("#caption-i-am");
 
