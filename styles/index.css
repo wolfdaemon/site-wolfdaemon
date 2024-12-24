@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(90, 30, 30);
+    color: white;
+    display: flex;
+}
+
+main {
+    background-color: #00000065;
+}
+
+div {
+    width: 65rem;
+}
+
+.mobile-menu {
+	display: ;
+}
