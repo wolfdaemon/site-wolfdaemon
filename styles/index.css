@@ -1,6 +1,9 @@
 body {
     background-color: rgb(90, 30, 30);
     color: white;
+    margin: 0;
+    padding: 0;
+
 }
 
 main {
