@@ -1,7 +1,6 @@
 body {
     background-color: rgb(90, 30, 30);
     color: white;
-    display: flex;
 }
 
 main {
@@ -12,6 +11,16 @@ div {
     width: 65rem;
 }
 
+nav > ul:first-child {
+	display: flex;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
 .mobile-menu {
-	display: ;
+	display: none;
+}
+
+.mobile-menu ul li {
+	display: block;
 }
