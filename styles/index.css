@@ -3,7 +3,6 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-
 }
 
 main {
@@ -14,6 +13,13 @@ nav > ul:first-child {
 	display: flex;
 	justify-content: space-between;
 	list-style-type: none;
+}
+
+section.index-hero {
+	height: 16rem;
+	background-image: url(../images/20241225-code-site-wolfdaemon-images-hero.jpg);
+	background-position: right;
+	max-width: 100%;
 }
 
 .mobile-menu {
