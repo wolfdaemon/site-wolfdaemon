@@ -14,7 +14,15 @@ body {
     padding: 0;
 }
 header {
+	background-color: #111;
+	color: white;
 	grid-area: header;
+	padding: 1rem;
+}
+header div.mobile-menu ul {
+	background-color: #222;
+	margin: 0;
+	padding: 1rem;
 }
 nav > ul:first-child {
 	display: flex;
@@ -24,6 +32,9 @@ nav > ul:first-child {
 }
 main {	
 	grid-area: middle;
+}
+section {
+	padding: 1rem;
 }
 section.index-hero {
 	background: url(../images/20241225-code-site-wolfdaemon-images-hero.jpg), #00000070;
@@ -38,13 +49,15 @@ section.index-hero span {
 	color: white;
 }
 footer {
-	background-color: black;
+	background-color: #111;
 	color: white;
 	grid-area: footer;
+	padding: 1rem;
 }
 footer * {
 	margin: 0;
 	padding: 0;
+	list-style-type: none;
 }
 
 
