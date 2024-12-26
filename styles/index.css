@@ -1,31 +1,87 @@
+/* Sectional elements */
+
 body {
-    background-color: rgb(90, 30, 30);
-    color: white;
+    background-color: #F2F0EF;
+    color: #000000;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "middle middle middle"
+    "footer footer footer";
+    grid-template-rows: auto 1fr auto;
     margin: 0;
+    min-height: 100vh;
     padding: 0;
 }
-
-main {
-    background-color: #00000065;
+header {
+	grid-area: header;
 }
-
 nav > ul:first-child {
 	display: flex;
 	justify-content: space-between;
 	list-style-type: none;
+	padding: 0;
+}
+main {	
+	grid-area: middle;
+}
+section.index-hero {
+	background: url(../images/20241225-code-site-wolfdaemon-images-hero.jpg), #00000070;
+	background-blend-mode: darken;
+	background-position: 40rem;
+	height: 32rem;
+	max-width: 100%;
+	padding: 1rem;
+}
+section.index-hero h1,
+section.index-hero span {
+	color: white;
+}
+footer {
+	background-color: black;
+	color: white;
+	grid-area: footer;
+}
+footer * {
+	margin: 0;
+	padding: 0;
 }
 
-section.index-hero {
-	height: 16rem;
-	background-image: url(../images/20241225-code-site-wolfdaemon-images-hero.jpg);
-	background-position: right;
-	max-width: 100%;
+
+/* Textual elements */
+h1 {
+	font-size: 2em;
 }
+h2 {
+	font-size: 1.5em;
+}
+h3 {
+	font-size: 1.17em;
+}
+h4 {
+	font-size: 1em;
+}
+h5 {
+	font-size: 0.83em;
+}
+h6 {
+	font-size: 0.67em;
+}
+
+/* Classes */
 
 .mobile-menu {
 	display: none;
 }
-
 .mobile-menu ul li {
 	display: block;
+}
+
+/* All of the above, but for desktop */
+
+@media only screen and (min-width: 768px) {
+	
+	section.index-hero {
+		background-position: 50%;	
+	}
 }
