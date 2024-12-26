@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>wolfdaemon</title>
-    <script src="scripts/index.js" defer></script>
+    <script src="../scripts/index.js" defer></script>
     <meta name="author" content="Michael &quot;Cal&quot; Krug">
     <meta name="description" content="This is the website's description that will show up in search results.">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="../styles/index.css">
 </head>
+
 
 <body>
 	<header>
 		<nav>
 			<ul>
-				<span>wolfdaemon logo</span>
-				<li>
-					<a href="../index.html">Home</a></li>
-				</li>
-				<li>
-					<a href="blog.html">Blog</a>
-				</li>
+				<li><span>🐺😈</span></li>
+				<li><button onClick="toggleDisplayMenu()">☰</button></li>
 			</ul>
+			<div class="mobile-menu">
+				<ul>
+					<li><a href="./index.html">Home</a></li>
+					<li><a href="blog.html">Blog</a><ff0000/li>
+				</ul>
+			</div>
+
 		</nav>
 	</header>
 
@@ -31,16 +34,22 @@
 		<article>
 			<h1>Blog</h1>
 			<h2>Entries</h2>
-
-			<span class="year">2024</span>
-			<ul>
-				<li><a href="articles/20241117-article-blog-why-i-am-writing-to-you.html">Why I am writing to you</a></li>
-			</ul>
+			<section>
+				<span class="year">2024</span>
+				<ul>
+					<li><a href="articles/20241117-article-blog-why-i-am-writing-to-you.html">Why I am writing to you</a></li>
+				</ul>
+			</section>
 		</article>
 
 	</main>
 
 	<footer>
+		<ul>Socials:
+			<li><a href="https://www.youtube.com/@wolfdaemonofficial">YouTube</a></li>
+			<li><a href="https://github.com/wolfdaemon">GitHub</a></li>
+			<li><a href="https://discord.com/invite/kpjtvzDqQa">Discord</a></li>
+		</ul>
 		<p><span class="symbol-copyleft">&copy;</span><a href="https://www.gnu.org/licenses/agpl-3.0.html">Copyleft</a> 2024 by wolfdaemon. All ethical rights preserved.</p>
 	</footer>
 </body>
