@@ -76,6 +76,10 @@ footer ul {
 
 
 /* Textual elements */
+a {
+	color: #da586d;
+}
+
 h1 {
 	font-size: 2em;
 }
