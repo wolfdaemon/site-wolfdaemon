@@ -23,6 +23,15 @@ header div.mobile-menu ul {
 	background-color: #222;
 	margin: 0;
 	padding: 1rem;
+	text-align: right;
+}
+header div.mobile-menu ul li a {
+	display: block;
+}
+header div.mobile-menu ul li a:hover,
+footer ul li a:hover {
+	background-color: #333;
+	color: lightblue;
 }
 nav > ul:first-child {
 	display: flex;
@@ -58,6 +67,11 @@ footer * {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
+}
+footer ul {
+	display: flex;
+	padding: 1rem;
+	justify-content: space-between;
 }
 
 
