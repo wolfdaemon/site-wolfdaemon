@@ -58,7 +58,7 @@ section {
 section.index-hero {
 	background: url(../images/20241225-code-site-wolfdaemon-images-hero.jpg), #00000070;
 	background-blend-mode: darken;
-	background-position: 40rem;
+	background-position: 85%;
 	height: 32rem;
 	max-width: 100%;
 	padding: 1rem;
@@ -116,13 +116,4 @@ h6 {
 }
 .mobile-menu ul li {
 	display: block;
-}
-
-/* All of the above, but for desktop */
-
-@media only screen and (min-width: 768px) {
-	
-	section.index-hero {
-		background-position: 50%;	
-	}
 }
