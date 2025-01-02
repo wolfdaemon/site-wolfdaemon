@@ -1,9 +1,15 @@
-/* Sectional elements */
+/* Imports */
+@font-face {
+	font-family: 'Bitter';
+	src: url('../fonts/Bitter/Bitter-VariableFont_wght.ttf');
+}
 
+/* Sectional elements */
 body {
     background-color: #F2F0EF;
     color: #000000;
     display: grid;
+	font-family: 'Bitter', serif;
     grid-template-areas:
     "header header header"
     "middle middle middle"
