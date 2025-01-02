@@ -64,6 +64,7 @@ section.index-hero {
 	height: 32rem;
 	max-width: 100%;
 	padding: 1rem;
+	text-shadow: 1px 1px 10px #460010;
 }
 section.index-hero h1,
 section.index-hero span {
