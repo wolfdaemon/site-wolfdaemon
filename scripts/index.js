@@ -14,12 +14,12 @@ function chooseQualities() {
 }
 
 function toggleDisplayMenu() {
-	const mobileMenu = document.querySelector(".mobile-menu");
-	const mobileMenuDisplay = mobileMenu.style.display; 
-	if (mobileMenuDisplay == "block") {
-		mobileMenu.style.display = "none";
+	const classMenu = document.querySelector(".menu");
+	const classMenuDisplay = classMenu.style.display; 
+	if (classMenuDisplay == "block") {
+		classMenu.style.display = "none";
 	} else {
-		mobileMenu.style.display = "block";
+		classMenu.style.display = "block";
 	}
 
 }

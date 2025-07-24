@@ -19,42 +19,55 @@ body {
     min-height: 100vh;
     padding: 0;
 }
+
 header {
 	background-color: #111;
 	color: white;
 	grid-area: header;
 	padding: 1rem;
+	position: fixed;
+	width: 100%;
+	margin: 0 -1rem;
 }
+
 header div.mobile-menu ul {
 	background-color: #222;
 	margin: 0;
 	padding: 1rem;
 	text-align: right;
 }
+
 header div.mobile-menu ul li a {
 	display: block;
 }
+
 header div.mobile-menu ul li a:hover,
 footer ul li a:hover {
 	background-color: #333;
 	color: lightblue;
 }
+
 nav ul li button {
 	background-color: black;
 	color: white;
 }
+
 nav > ul:first-child {
 	display: flex;
 	justify-content: space-between;
 	list-style-type: none;
-	padding: 0;
+	padding: 1rem;
 }
+
 main {	
 	grid-area: middle;
+	margin: 7.5rem 0;
 }
+
 section {
 	padding: 1rem;
 }
+
 section.index-hero {
 	background: url(../images/20241225-code-site-wolfdaemon-images-hero.jpg), #00000070;
 	background-blend-mode: lighten;
@@ -66,27 +79,30 @@ section.index-hero {
 	padding: 1rem;
 	text-shadow: 1px 1px 10px #460010;
 }
+
 section.index-hero h1,
 section.index-hero span {
 	color: white;
 }
+
 footer {
 	background-color: #111;
 	color: white;
 	grid-area: footer;
 	padding: 1rem;
 }
+
 footer * {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
+
 footer ul {
 	display: flex;
 	padding: 1rem;
 	justify-content: space-between;
 }
-
 
 /* Textual elements */
 a {
@@ -96,27 +112,46 @@ a {
 h1 {
 	font-size: 2em;
 }
+
 h2 {
 	font-size: 1.5em;
 }
+
 h3 {
 	font-size: 1.17em;
 }
+
 h4 {
 	font-size: 1em;
 }
+
 h5 {
 	font-size: 0.83em;
 }
+
 h6 {
 	font-size: 0.67em;
 }
 
 /* Classes */
 
-.mobile-menu {
+.menu {
 	display: none;
 }
-.mobile-menu ul li {
+
+.menu ul li {
 	display: block;
 }
+
+@media screen and (min-width: 960px) {
+
+	header {
+		position: static;
+	}
+
+	main {
+		margin: 0;
+	}
+
+}
+
