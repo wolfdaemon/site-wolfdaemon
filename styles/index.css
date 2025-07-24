@@ -141,6 +141,8 @@ h6 {
 
 .menu ul li {
 	display: block;
+	text-align: right;
+	padding: 0 1rem 0 0;
 }
 
 @media screen and (min-width: 960px) {
