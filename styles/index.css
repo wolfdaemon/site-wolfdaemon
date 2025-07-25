@@ -30,24 +30,23 @@ header {
 	margin: 0 -1rem;
 }
 
-header div.mobile-menu ul {
-	background-color: #222;
+header div.menu ul {
 	margin: 0;
 	padding: 1rem;
 	text-align: right;
 }
 
-header div.mobile-menu ul li a {
+header div.menu ul li a {
 	display: block;
 }
 
-header div.mobile-menu ul li a:hover,
+header div.menu ul li a:hover,
 footer ul li a:hover {
 	background-color: #333;
 	color: lightblue;
 }
 
-nav ul li button {
+nav ul li button.menu-btn {
 	background-color: black;
 	color: white;
 }
@@ -151,8 +150,20 @@ h6 {
 		position: static;
 	}
 
+	header div.menu ul {
+		display: inline-flex;
+	}
+
 	main {
 		margin: 0;
+	}
+	
+	nav div.menu {
+		display: block;
+	}
+
+	nav ul li button.menu-btn {
+		display: none;
 	}
 
 }
