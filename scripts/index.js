@@ -27,3 +27,5 @@ function toggleDisplayMenu() {
 // function calls
 
 setInterval(chooseQualities, 200); // run function every 0.2 seconds
+
+document.getElementById("year").innerHTML = new Date().getFullYear();
