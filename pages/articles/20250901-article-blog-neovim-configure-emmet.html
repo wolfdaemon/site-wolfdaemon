@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>How to configure Emmet in Neovim | Article | wolfdaemon</title>
+    <script src="../../scripts/index.js" defer></script>
+    <meta name="author" content="Michael &quot;Cal&quot; Krug">
+    <meta name="description" content="Demystifying Neovim for speedy, simple web development.">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/index.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><span>🐺😈</span></li>
+				<li><button class="menu-btn" onClick="toggleDisplayMenu()">☰</button></li>
+			</ul>
+			<ul>
+				<div class="menu">
+				<ul>
+					<li><a href="../../index.html">Home</a></li>
+					<li><a href="../blog.html">Blog</a></li>
+				</ul>
+			</div>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<article>
+			<section>
+				<hgroup>
+					<h1>How to Set Up Emmet in Neovim</h1>
+					<p>Emmet is a powerful plugin that can significantly improve your HTML and CSS workflow by allowing you to write abbreviations that expand into full-fledged code snippets. Setting up Emmet in Neovim may seem daunting at first, but with the right steps, you can have it up and running in no time.</p>
+				</hgroup>
+			</section>
+			<section>
+				<h2>Prerequisites</h2>
+				<ul>
+					<li>Neovim installed on your system</li>
+					<li>Neovim configuration file (e.g., init.lua or init.vim)</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Steps</h2>
+				<ol>
+					<li>
+						<ul>Install Lazy.nvim (a plugin manager):
+							<li>Create a new file called <pre>init.lua</pre> (or use your existing one) in the <pre><code>~/.config/nvim/</code></pre> directory.</li>
+							<li>Add the following code to bootstrap <pre>Lazy.nvim</pre>:
+								<pre><code>
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+								</code></pre>
+							</li>
+						</ul>
+							<li>Install the nvim-emmet plugin:
+							Add the following configuration to your init.lua file, inside the require("lazy").setup({ ... }) block:</li>
+								<pre><code>
+{
+  "olrtg/nvim-emmet",
+  config = function()
+    vim.keymap.set({ "n", "v" }, "<leader>xe", require("nvim-emmet").wrap_with_abbreviation)
+  end,
+},
+								</code></pre>
+							</li>
+							<li>Install the emmet-language-server:
+							Add the following configuration to your init.lua file, after the require("lazy").setup({ ... }) block:
+
+								<pre><code>
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	  pattern = "css,eruby,html,htmldjango,javascriptreact,less,pug,sass,scss,typescriptreact",
+	  callback = function()
+	    vim.lsp.start({
+	      cmd = { "emmet-language-server", "--stdio" },
+	      root_dir = vim.fs.dirname(vim.fs.find({ ".git" }, { upward = true })[1]),
+	      init_options = {
+		-- Emmet configuration options go here
+	      },
+	    })
+	  end,
+	})
+								</code></pre>
+							</li>
+							<li>Install the emmet-language-server using the Mason plugin manager:
+							Add the following configuration to your init.lua file, inside the require("lazy").setup({ ... }) block:
+								<pre><code>
+{
+  "mason-org/mason.nvim",
+  opts = {},
+},
+								</code></pre>
+							</li>
+							<li>Then, within Neovim, run the command <pre><code>:MasonInstall emmet-language-server</code></pre> to install the server.</li>
+								<ol>Test Emmet functionality:
+									<li>Open a file with an HTML, CSS, or other supported file type.</li>
+									<li>Type an Emmet abbreviation, such as <pre>html:5</pre>, and press <pre><code><leader>xe</code></pre> (by default, <pre><code><leader></code></pre> is set to <pre>SPACE</pre> on your keyboard).</li>
+									<li>Emmet should expand the abbreviation into the corresponding code snippet.</li>
+							</ol></li>
+						</ol>
+					</li>
+				</ol>
+
+				<p>That's it! You've now successfully set up Emmet in your Neovim configuration. You can further customize the Emmet settings and keybindings to suit your preferences.</p>
+			</section>
+		</article>
+	</main>
+	<footer>
+		<ul>Socials:
+			<li><a href="https://www.youtube.com/@wolfdaemonofficial">YouTube</a></li>
+			<li><a href="https://github.com/wolfdaemon">GitHub</a></li>
+			<li><a href="https://discord.com/invite/kpjtvzDqQa">Discord</a></li>
+		</ul>
+		<p><span class="symbol-copyleft">&copy;</span><a href="https://www.gnu.org/licenses/agpl-3.0.html">Copyleft</a> <span id="year"></span> by wolfdaemon. All ethical rights preserved.</p>
+	</footer>
+</body>
+</html>
