@@ -9,6 +9,11 @@ article {
 	background-color: hsl(168, 100%, 50%, 5%);
 }
 
+blockquote {
+	background-color: hsl(168, 50%, 50%, 5%);
+	padding: .5rem 2rem;
+}
+
 body {
 	  outline: 1px solid red;
     background-color: #333333;
