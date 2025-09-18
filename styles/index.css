@@ -115,10 +115,10 @@ footer * {
 	list-style-type: none;
 }
 
-footer ul {
+footer div.socials {
 	display: flex;
 	padding: 1rem;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 /* Textual elements */
