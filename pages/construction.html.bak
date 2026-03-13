@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../styles/index.css">
 </head>
 
-
 <body>
 	<header>
 		<nav>
@@ -32,16 +31,16 @@
 		
 		<article class="scanlines">
 
+			 <main>
+				<hgroup>
+					<div class="hero-message">
+						<h2>Under Contruction</h2>
+					</div>
+				</hgroup>
 			<section>
-				<p>Here is a where you can reach me:</p>
-				<ul>
-					<li><a href="https://discord.com/users/1199943016648032297">Discord</a></li>
-					<li><a href="mailto:wolfdaemon@murena.io">Email</li>
-					<li><a href="https://youtube.com/channel/UCTWQ94Rb-sh1LZKjSIC2x0A">YouTube</a></li>
-					<li><a href="https://odysee.com/@wolfdaemonofficial:6">Odysee</a></li>
-				</ul>
+				<p>This webpage is currently under construction. Pardon!</p>
 			</section>
-			
+
 		</article>
 
 	</main>
@@ -56,10 +55,10 @@
 			<ul>Let's chat!
 				<li><img class="favicon" src="https://www.mumble.info//favicon.ico"> <a href="mumble://mumble.wolfdaemon.xyz">Mumble</li>
 				<li>📨<a href="mailto:wolfdaemon@murena.io">Email</a></li>
-				<li><img class="favicon" src="https://xmpp.org/favicon-32x32.png"> <a href="xmpp:wolfdaemon@wolfdaemon.xyz">XMPP</a></li>
+				<li><img class="favicon" src="https://xmpp.org/favicon-32x32.png"> <a href="xmpp:wolfdaemon@skyn3t.lol">XMPP</a></li>
 			</ul>
 		</div>
 		<p><span class="symbol-copyleft">&copy;</span><a href="https://www.gnu.org/licenses/agpl-3.0.html">Copyleft</a> <span id="year"></span> by wolfdaemon. All ethical rights preserved.</p>
-	</footer>>
+	</footer>
 </body>
 </html>
